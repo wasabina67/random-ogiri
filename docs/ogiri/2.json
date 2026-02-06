@@ -1,0 +1,16 @@
+{
+    "category_id": 2,
+    "category_name": "category_name",
+    "data": [
+        {
+            "id": 1,
+            "topic": "topic",
+            "image": "image",
+            "example": [
+                "example-1",
+                "example-2",
+                "example-3"
+            ]
+        }
+    ]
+}
