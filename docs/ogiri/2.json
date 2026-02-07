@@ -5,7 +5,7 @@
         {
             "id": 1,
             "topic": "小学校の先生って運動会のことを裏でなんて呼んでるの？",
-            "image": "",
+            "image": null,
             "example": [
                 "example-1",
                 "example-2",
@@ -15,7 +15,7 @@
         {
             "id": 2,
             "topic": "子供に算数を好きにさせる方法を教えてください",
-            "image": "",
+            "image": null,
             "example": [
                 "example-1",
                 "example-2",
@@ -25,7 +25,7 @@
         {
             "id": 3,
             "topic": "学校で一番人気になる簡単な方法は？",
-            "image": "",
+            "image": null,
             "example": [
                 "example-1",
                 "example-2",
