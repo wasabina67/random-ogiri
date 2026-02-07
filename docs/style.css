@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  background: #ff6b35;
+  color: #fff;
+  text-align: center;
+  padding: 20px 16px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+main {
+  width: 100%;
+  max-width: 600px;
+  padding: 24px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.category-badge {
+  display: inline-block;
+  background: #ff6b35;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+
+.topic {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.topic-image {
+  height: 100%;
+  max-height: 400px;
+  border-radius: 8px;
+}
+
+.examples {
+  width: 100%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.examples h2 {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.examples ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.examples li {
+  padding: 10px 14px;
+  background: #faf3ee;
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
+.next-button {
+  background: #ff6b35;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.next-button:hover {
+  background: #e55a28;
+}
+
+.next-button:active {
+  background: #cc4e20;
+}
+
+.hidden {
+  display: none;
+}

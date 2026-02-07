@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ランダム大喜利</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>ランダム大喜利</h1>
+    </header>
+    <main>
+      <span id="category" class="category-badge"></span>
+      <p id="topic" class="topic"></p>
+      <img id="image" class="topic-image hidden" alt="お題の画像">
+      <div class="examples">
+        <h2>回答例</h2>
+        <ul id="examples"></ul>
+      </div>
+      <button class="next-button" onclick="showRandom()">次のお題</button>
+    </main>
+    <script>
+      const CATEGORY_FILES = ["ogiri/1.json", "ogiri/2.json"];
+      let categories = [];
 
+      function showRandom() {
+        const cat = categories[Math.floor(Math.random() * categories.length)];
+        const item = cat.data[Math.floor(Math.random() * cat.data.length)];
+
+        document.getElementById("category").textContent = cat.category_name;
+        document.getElementById("topic").textContent = item.topic;
+
+        const img = document.getElementById("image");
+        if (item.image) {
+          img.src = "images/" + cat.category_id + "/" + item.image;
+          img.classList.remove("hidden");
+        } else {
+          img.classList.add("hidden");
+          img.removeAttribute("src");
+        }
+
+        const ul = document.getElementById("examples");
+        ul.innerHTML = "";
+        for (const answer of item.example) {
+          const li = document.createElement("li");
+          li.textContent = answer;
+          ul.appendChild(li);
+        }
+      }
+
+      async function loadData() {
+        const responses = await Promise.all(CATEGORY_FILES.map(f => fetch(f)));
+        categories = await Promise.all(responses.map(r => r.json()));
+        showRandom();
+      }
+
+      loadData();
+    </script>
+  </body>
+</html>
