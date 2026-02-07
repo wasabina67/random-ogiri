@@ -5,7 +5,7 @@
         {
             "id": 1,
             "topic": "このネコの気持ちを一言",
-            "image": "image",
+            "image": "1.jpg",
             "example": [
                 "example-1",
                 "example-2",
@@ -15,7 +15,7 @@
         {
             "id": 2,
             "topic": "この犬が飼い主に言いたいこと",
-            "image": "image",
+            "image": "2.jpg",
             "example": [
                 "example-1",
                 "example-2",
@@ -25,7 +25,7 @@
         {
             "id": 3,
             "topic": "この赤ちゃんの心の声",
-            "image": "image",
+            "image": "3.jpg",
             "example": [
                 "example-1",
                 "example-2",
